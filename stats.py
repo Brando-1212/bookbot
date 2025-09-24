@@ -16,4 +16,14 @@ def char_count(file):
             tot_count[temp] += 1
         else:
             tot_count[temp] = 1
-    return tot_count 
+    return tot_count
+def sort_on(items):
+    return items["num"]
+
+def sort(char_tot):
+    sort_list = []
+    for key, value in char_tot.items():
+        sort_list.append({"char": key , "num": value})
+    sort_list.sort(reverse=True, key=sort_on)
+    return sort_list
+
